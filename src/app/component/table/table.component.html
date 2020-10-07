@@ -12,7 +12,7 @@
   <!-- Name Column -->
   <ng-container matColumnDef="name">
     <th mat-header-cell *matHeaderCellDef> Name </th>
-    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    <td mat-cell *matCellDef="let element"> <div class="circulo" [ngClass]="{'por-renovar': element.nav_id === 1, 'sin-renovar': element.nav_id === 2, 'renovadas': element.nav_id === 3}"></div> {{element.name}} </td>
   </ng-container>
 
   <!-- Weight Column -->

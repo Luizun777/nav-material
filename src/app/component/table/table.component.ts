@@ -1,25 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
-];
-
+import { FiltrosService } from 'src/app/services/filtros.service';
+import { TablaService } from 'src/app/services/tabla.service';
 
 @Component({
   selector: 'app-table',
@@ -29,11 +10,30 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class TableComponent implements OnInit {
 
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  dataSource = [];
 
-  constructor() { }
+  constructor(
+    private navSrv: FiltrosService,
+    private tablaSrv: TablaService
+  ) { }
 
   ngOnInit(): void {
+    this.filtarTabla(0);
+    this.escucharFiltro();
+  }
+
+  escucharFiltro() {
+    this.navSrv.changeNav.subscribe((data: any) => {
+      this.filtarTabla(data);
+    });
+  }
+
+  filtarTabla(renovacion: number) {
+    if (renovacion !== 0) {
+      this.dataSource = this.tablaSrv.getData().filter((tabla: any) => tabla.nav_id === renovacion);
+    } else {
+      this.dataSource = this.tablaSrv.getData();
+    }
   }
 
 }
