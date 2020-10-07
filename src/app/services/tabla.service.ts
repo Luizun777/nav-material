@@ -18,7 +18,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   },
   {
     position: 2,
-    nav_id: 2,
+    nav_id: 1,
     name: 'Helium',
     weight: 4.0026,
     symbol: 'He'
