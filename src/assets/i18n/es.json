@@ -1,0 +1,40 @@
+{
+  "settings": {
+    "setAllFields": "Activar Todos Los Campos",
+    "contractor": "Contratante",
+    "planName": "Nombre del Plan",
+    "insuredNumber": "No. Asegurado",
+    "renewalStatus": "Estatus de renovación",
+    "beginningValidity": "Inicio de vigencia",
+    "endValidity": "Fin de vigencia",
+    "daysEndValidity": "Días fin vigencia",
+    "policyNumber": "Número de póliza",
+    "methodPayment": "Forma de pago",
+    "paymentChannel": "Conducto de pago",
+    "currentTotalPremium": "Prima total actual",
+    "totalPremiumRenew": "Prima total a renovar",
+    "percentageIncrease": "% del incremento",
+    "identifiedCustomer": "Cliente identificado",
+    "selectRisk": "Riesgo Selecto",
+    "cover": "Carátula"
+  },
+  "policiesHeader": {
+    "insuredNumber": "No. de aseg.",
+    "daysEndValidity": "Días para renovar",
+    "currentTotalPremium": "Pri. total actual",
+    "totalPremiumRenew": "Pri. total a renovar",
+    "physicalImpression": "Impresión física",
+    "coverReceipts": "Carátula y recibos"
+  },
+  "buttons": {
+    "downloadSpreadsheet": "Descargar hoja de cálculo",
+    "renewalWithoutChanges": "Renovación Sin Cambios",
+    "renewalWithChanges": "Renovación Con Cambios"
+  },
+  "status": {
+    "pendingRenovation": "Pendiente de renovación",
+    "renewed": "Renovada",
+    "underRenovation": "En proceso de renovación"
+  },
+  "filters": {}
+}
