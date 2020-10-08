@@ -4,7 +4,7 @@
       Periodo
     </div>
     <div class="texto-fecha">
-      15/12/2019 - 15/01/2020
+      {{ fechaIn ? (fechaIn | date: 'dd/MM/yyyy') : 'Fecha Inicio'}} - {{fechaFn ? (fechaFn | date: 'dd/MM/yyyy') : 'Fecha Fin'}}
     </div>
     <div class="icon">
       <ng-container *ngIf="tipoSelect else openIcon">▲</ng-container>
