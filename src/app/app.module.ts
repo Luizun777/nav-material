@@ -43,6 +43,8 @@ const declarations = [
 const imports = [
   BrowserModule,
   AppRoutingModule,
+  BrowserAnimationsModule,
+  MaterialsModule,
   TranslateModule.forRoot({loader: {
     deps: [HttpClient],
     provide: TranslateLoader,

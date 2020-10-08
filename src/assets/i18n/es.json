@@ -36,5 +36,9 @@
     "renewed": "Renovada",
     "underRenovation": "En proceso de renovación"
   },
-  "filters": {}
+  "filters": {
+    "total": "Total",
+    "pendingRenovation": "Por Renovar",
+    "withoutAgilRenovation": "Sin Renovacion Agil"
+  }
 }
