@@ -15,11 +15,11 @@
     <div class="contenido">
       <div class="titulo">Confirmar las fechas seleccionadas</div>
       <div class="contenido-fecha">
-        <app-calendario></app-calendario>
+        <app-calendario [limpiar]="(limpiar)" (rangoFechas)="getFecha($event)"></app-calendario>
       </div>
       <div class="btn-contenido">
-        <button mat-raised-button (click)="tipoSelect = !tipoSelect">Aplicar</button>
-        <button mat-raised-button (click)="tipoSelect = !tipoSelect">Limpiar</button>
+        <button mat-raised-button (click)="confirmar()">Aplicar</button>
+        <button mat-raised-button (click)="btnLimpiar()">Limpiar</button>
       </div>
     </div>
   </ng-container>
