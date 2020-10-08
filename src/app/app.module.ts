@@ -1,10 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {LOCALE_ID, NgModule} from '@angular/core';
-import {
-  HTTP_INTERCEPTORS, HttpClient, HttpClientModule
-} from '@angular/common/http';
-import es from '@angular/common/locales/es';
-import {registerLocaleData} from '@angular/common';
+import { LOCALE_ID, NgModule} from '@angular/core';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 
 // Dependencies
 import {
@@ -44,11 +40,13 @@ const imports = [
   BrowserAnimationsModule,
   HttpClientModule,
   MaterialsModule,
-  TranslateModule.forRoot({loader: {
-    deps: [HttpClient],
-    provide: TranslateLoader,
-    useFactory: HttpLoaderFactory
-  }}),
+  TranslateModule.forRoot({
+    loader: {
+      deps: [HttpClient],
+      provide: TranslateLoader,
+      useFactory: HttpLoaderFactory
+    }
+  }),
   BrowserAnimationsModule,
   MaterialsModule,
   ReactiveFormsModule
@@ -58,9 +56,6 @@ const providers = [{
   multi: true,
   provide: HTTP_INTERCEPTORS,
   useClass: MainHttpInterceptor
-}, {
-  provide: LOCALE_ID,
-  useValue: 'es'
 }];
 
 @NgModule({
@@ -73,5 +68,5 @@ export class AppModule { }
 
 // tslint:disable-next-line:typedef
 export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http);
 }
