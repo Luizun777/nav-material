@@ -19,6 +19,14 @@ export class CalendarioComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit(): void {
+    if (!JSON.parse(localStorage.getItem('fecha-filtro'))) {
+      this.limpiarForm();
+    } else {
+      this.range.setValue({
+        start: JSON.parse(localStorage.getItem('fecha-filtro')).start ? JSON.parse(localStorage.getItem('fecha-filtro')).start : '',
+        end: JSON.parse(localStorage.getItem('fecha-filtro')).end ? JSON.parse(localStorage.getItem('fecha-filtro')).end : ''
+      });
+    }
   }
 
   ngOnChanges() {
@@ -28,9 +36,7 @@ export class CalendarioComponent implements OnInit, OnChanges {
   }
 
   changeFch() {
-    if (this.range.valid) {
-      this.rangoFechas.emit(this.range.value);
-    }
+    this.rangoFechas.emit((this.range.value['start'] && this.range.value['end']) ? this.range.value : {});
   }
 
   limpiarForm() {
@@ -38,6 +44,7 @@ export class CalendarioComponent implements OnInit, OnChanges {
       start: '',
       end: ''
     });
+    localStorage.setItem('fecha-filtro', JSON.stringify({}));
   }
 
 }
