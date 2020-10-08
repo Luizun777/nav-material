@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "nav-app"
+  "defaultProject": "nav-app",
+  "cli": {
+    "analytics": "384077e9-4b1b-4e03-8ceb-c4c7e4aac43c"
+  }
 }
