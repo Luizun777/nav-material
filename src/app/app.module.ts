@@ -29,8 +29,6 @@ import { ContenedorFechaComponent } from './shared/header/contenedor-fecha/conte
 import {Config} from './config';
 import {MainHttpInterceptor} from './interceptor/main-http-interceptor';
 
-export const HttpLoaderFactory = (http: HttpClient) => new TranslateHttpLoader(http, Config.translatePath);
-
 const declarations = [
     AppComponent,
     HeaderComponent,
@@ -44,6 +42,7 @@ const imports = [
   BrowserModule,
   AppRoutingModule,
   BrowserAnimationsModule,
+  HttpClientModule,
   MaterialsModule,
   TranslateModule.forRoot({loader: {
     deps: [HttpClient],
@@ -64,8 +63,6 @@ const providers = [{
   useValue: 'es'
 }];
 
-registerLocaleData(es);
-
 @NgModule({
   bootstrap: [AppComponent],
   declarations,
@@ -73,3 +70,8 @@ registerLocaleData(es);
   providers
 })
 export class AppModule { }
+
+// tslint:disable-next-line:typedef
+export function HttpLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http);
+}
