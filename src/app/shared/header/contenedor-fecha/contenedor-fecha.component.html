@@ -1,0 +1,26 @@
+<div class="select">
+  <div class="btn-fecha" (click)="tipoSelect = !tipoSelect">
+    <div class="texto-periodo">
+      Periodo
+    </div>
+    <div class="texto-fecha">
+      15/12/2019 - 15/01/2020
+    </div>
+    <div class="icon">
+      <ng-container *ngIf="tipoSelect else openIcon">▲</ng-container>
+      <ng-template #openIcon>▼</ng-template>
+    </div>
+  </div>
+  <ng-container *ngIf="tipoSelect">
+    <div class="contenido">
+      <div class="titulo">Confirmar las fechas seleccionadas</div>
+      <div class="contenido-fecha">
+        <app-calendario></app-calendario>
+      </div>
+      <div class="btn-contenido">
+        <button mat-raised-button (click)="tipoSelect = !tipoSelect">Aplicar</button>
+        <button mat-raised-button (click)="tipoSelect = !tipoSelect">Limpiar</button>
+      </div>
+    </div>
+  </ng-container>
+</div>
