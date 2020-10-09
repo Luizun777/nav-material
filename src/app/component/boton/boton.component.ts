@@ -9,6 +9,7 @@ export class BotonComponent implements OnInit {
 
   @Input() texto: string;
   @Input() descativar: boolean = false;
+  @Input() btnRelleno: boolean = false;
 
   constructor() { }
 
