@@ -8,6 +8,9 @@ import { TranslateModule } from '@ngx-translate/core';
 import { MaterialsModule } from '../materials/materials.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+// FontAwesome
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { BotonComponent } from './boton/boton.component'
 import { CalendarioComponent } from './calendario/calendario.component'
 import { TableComponent } from './table/table.component'
@@ -17,7 +20,8 @@ import { TableComponent } from './table/table.component'
     MaterialsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    TranslateModule
+    TranslateModule,
+    FontAwesomeModule
   ],
   declarations: [
     BotonComponent,
