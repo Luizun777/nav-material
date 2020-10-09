@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FiltrosService } from 'src/app/services/filtros.service';
 
 @Component({
   selector: 'app-contenedor-fecha',
@@ -10,7 +9,7 @@ export class ContenedorFechaComponent implements OnInit {
 
   tipoSelect: boolean;
   limpiar: boolean = false;
-  nuevaFecha: any;
+  nuevaFecha: any = {};
 
   fechaIn: string;
   fechaFn: string;

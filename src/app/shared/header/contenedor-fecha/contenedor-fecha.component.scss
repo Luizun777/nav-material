@@ -10,7 +10,7 @@
   .btn-fecha {
     border-radius: 5px;
     width: fit-content;
-    border: 2px solid orange;
+    border: 1px solid grey;
     text-align: inherit;
     display: flex;
     justify-content: space-between;
@@ -21,6 +21,9 @@
     display: flex;
     align-items: center;
     font-size: 14px;
+    &.active {
+      border: 2px solid orange;
+    }
     .texto-periodo {
       margin-right: 0.5rem;
       padding-right: 0.5rem;
@@ -28,7 +31,10 @@
     }
     .texto-fecha {
       margin-right: 0.5rem;
-      color: orange;
+      color: grey;
+      &.txt-active {
+        color: orange;
+      }
     }
     .icon {
       color: gray;
