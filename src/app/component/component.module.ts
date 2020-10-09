@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Translate
 import { TranslateModule } from '@ngx-translate/core';
@@ -10,7 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BotonComponent } from './boton/boton.component'
 import { CalendarioComponent } from './calendario/calendario.component'
 import { TableComponent } from './table/table.component'
-import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [

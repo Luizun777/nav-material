@@ -18,8 +18,8 @@
         <app-calendario [limpiar]="(limpiar)" (rangoFechas)="getFecha($event)"></app-calendario>
       </div>
       <div class="btn-contenido">
-        <button mat-raised-button (click)="confirmar()">{{ 'shared.header.contenedorFecha.btnAplicar' | translate }}</button>
-        <button mat-raised-button (click)="btnLimpiar()">{{ 'shared.header.contenedorFecha.btnLimpiar' | translate }}</button>
+        <app-boton [texto]="'shared.header.contenedorFecha.btnAplicar' | translate" (click)="confirmar()"></app-boton>
+        <app-boton [texto]="'shared.header.contenedorFecha.btnLimpiar' | translate" (click)="btnLimpiar()"></app-boton>
       </div>
     </div>
   </ng-container>
