@@ -3,4 +3,8 @@
 }
 .contendio {
   padding: 2rem 1rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr repeat(2, auto);
+  align-items: center;
 }
