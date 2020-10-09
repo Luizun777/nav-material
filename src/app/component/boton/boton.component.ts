@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-boton',
@@ -10,6 +11,7 @@ export class BotonComponent implements OnInit {
   @Input() texto: string;
   @Input() descativar: boolean = false;
   @Input() btnRelleno: boolean = false;
+  @Input() icon: FontAwesomeModule = null;
 
   constructor() { }
 
