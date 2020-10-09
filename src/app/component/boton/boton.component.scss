@@ -1,6 +1,22 @@
 button {
+  color: orange;
+  min-width: 45px;
+  &.activo {
+    border: 1px solid orange;
+  }
   &.relleno {
     background-color: orange;
     color: #ffffff;
+  }
+  .contenido {
+    &.contenido-icon {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-gap: 0.5rem;
+    }
+    .icon-only {
+      font-size: 20px;
+      color: gray;
+    }
   }
 }

@@ -1,3 +1,10 @@
-<button [ngClass]="{'relleno': btnRelleno}" mat-raised-button [disabled]="descativar">
-  {{texto}}
+<button [ngClass]="{'relleno': btnRelleno,'activo': !descativar}"  mat-raised-button [disabled]="descativar">
+  <div class="contenido" [ngClass]="{'contenido-icon': icon && texto}">
+    <ng-container *ngIf="icon">
+      <fa-icon [ngClass]="{'icon-only': !texto}" [icon]="icon"></fa-icon>
+    </ng-container>
+    <div class="texto">
+      {{texto}}
+    </div>
+  </div>
 </button>
