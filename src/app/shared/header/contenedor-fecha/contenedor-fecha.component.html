@@ -1,7 +1,7 @@
 <div class="select">
   <div class="btn-fecha" (click)="tipoSelect = !tipoSelect">
     <div class="texto-periodo">
-      Periodo
+      {{ 'shared.header.contenedorFecha.textoPeriodo' | translate }}
     </div>
     <div class="texto-fecha">
       {{ fechaIn ? (fechaIn | date: 'dd/MM/yyyy') : 'Fecha Inicio'}} - {{fechaFn ? (fechaFn | date: 'dd/MM/yyyy') : 'Fecha Fin'}}
@@ -13,13 +13,13 @@
   </div>
   <ng-container *ngIf="tipoSelect">
     <div class="contenido">
-      <div class="titulo">Confirmar las fechas seleccionadas</div>
+      <div class="titulo">{{ 'shared.header.contenedorFecha.textoConfirmarFecha' | translate }}</div>
       <div class="contenido-fecha">
         <app-calendario [limpiar]="(limpiar)" (rangoFechas)="getFecha($event)"></app-calendario>
       </div>
       <div class="btn-contenido">
-        <button mat-raised-button (click)="confirmar()">Aplicar</button>
-        <button mat-raised-button (click)="btnLimpiar()">Limpiar</button>
+        <button mat-raised-button (click)="confirmar()">{{ 'shared.header.contenedorFecha.btnAplicar' | translate }}</button>
+        <button mat-raised-button (click)="btnLimpiar()">{{ 'shared.header.contenedorFecha.btnLimpiar' | translate }}</button>
       </div>
     </div>
   </ng-container>

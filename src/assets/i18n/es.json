@@ -40,5 +40,23 @@
     "total": "Total",
     "pendingRenovation": "Por Renovar",
     "withoutAgilRenovation": "Sin Renovacion Agil"
+  },
+  "component": {
+    "calendario": {
+      "fechaInicio": "Fecha inicio",
+      "fechaFin": "Fecha fin",
+      "InvalidStart": "Fecha inicio inválida",
+      "InvalidEnd": "Fecha fin inválida"
+    }
+  },
+  "shared": {
+    "header": {
+      "contenedorFecha": {
+        "textoPeriodo": "Periodo",
+        "textoConfirmarFecha": "Confirmar las fechas seleccionadas",
+        "btnAplicar": "Aplicar",
+        "btnLimpiar": "Limpiar"
+      }
+    }
   }
 }
