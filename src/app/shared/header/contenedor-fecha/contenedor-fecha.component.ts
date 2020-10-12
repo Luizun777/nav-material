@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-contenedor-fecha',
@@ -13,6 +14,9 @@ export class ContenedorFechaComponent implements OnInit {
 
   fechaIn: string;
   fechaFn: string;
+
+  iconUp = faCaretUp;
+  iconDown = faCaretDown;
 
   constructor() { }
 

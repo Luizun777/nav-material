@@ -51,11 +51,15 @@
   },
   "shared": {
     "header": {
+      "btnDescarga": "Descargar hoja de cálculo",
       "contenedorFecha": {
         "textoPeriodo": "Periodo",
         "textoConfirmarFecha": "Confirmar las fechas seleccionadas",
         "btnAplicar": "Aplicar",
         "btnLimpiar": "Limpiar"
+      },
+      "filtroSelect": {
+        "TooltipFiltro": "Da click en el icono para modificar la vista de la tabla"
       }
     }
   }

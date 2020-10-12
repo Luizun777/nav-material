@@ -7,8 +7,12 @@
       {{ fechaIn ? (fechaIn | date: 'dd/MM/yyyy') : 'Fecha Inicio'}} - {{fechaFn ? (fechaFn | date: 'dd/MM/yyyy') : 'Fecha Fin'}}
     </div>
     <div class="icon">
-      <ng-container *ngIf="tipoSelect else openIcon">▲</ng-container>
-      <ng-template #openIcon>▼</ng-template>
+      <ng-container *ngIf="tipoSelect else openIcon">
+        <fa-icon [icon]="iconUp"></fa-icon>
+      </ng-container>
+      <ng-template #openIcon>
+        <fa-icon [icon]="iconDown"></fa-icon>
+      </ng-template>
     </div>
   </div>
   <ng-container *ngIf="tipoSelect">
