@@ -1,0 +1,15 @@
+<div class="select">
+  <app-boton [matTooltip]="'shared.header.filtroSelect.TooltipFiltro' | translate" matTooltipClass="btn-tooltip" matTooltipPosition="left" [icon]="iconFiltro" (click)="tipoSelect = !tipoSelect"></app-boton>
+  <ng-container *ngIf="tipoSelect">
+    <section class="contenido">
+      <div class="check-todos">
+        <mat-checkbox [checked]="allComplete" [indeterminate]="someComplete()" (change)="setAll($event.checked)">
+          {{task.name}}
+        </mat-checkbox>
+      </div>
+      <mat-checkbox *ngFor="let subtask of task.subtasks" [(ngModel)]="subtask.completed" (ngModelChange)="updateAllComplete()">
+        {{subtask.name}}
+      </mat-checkbox>
+    </section>
+  </ng-container>
+</div>
